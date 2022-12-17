@@ -5,9 +5,9 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class musteriService {
+public class CustomerService {
 
-    public List<Musteri> getMusteriler(){
-        return List.of(new Musteri("malik@gmail.com", "1234"));
+    public List<Customer> getMusteriler(){
+        return List.of(new Customer("malik@gmail.com", "1234"));
     }
 }

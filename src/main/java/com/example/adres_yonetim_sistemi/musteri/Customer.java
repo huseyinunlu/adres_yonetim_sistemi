@@ -1,16 +1,11 @@
 package com.example.adres_yonetim_sistemi.musteri;
 
-import com.example.adres_yonetim_sistemi.adres.Adres;
 import jakarta.persistence.*;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
 
 
 @Entity
 @Table(name="musteriler")
-public class Musteri {
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
@@ -22,18 +17,18 @@ public class Musteri {
 
 
 
-    public Musteri(String mail, String password) {
+    public Customer(String mail, String password) {
         this.mail = mail;
         this.password = password;
     }
 
-    public Musteri(Long id, String mail, String password) {
+    public Customer(Long id, String mail, String password) {
         this.id = id;
         this.mail = mail;
         this.password = password;
     }
 
-    public Musteri() {
+    public Customer() {
 
     }
 
@@ -44,4 +39,7 @@ public class Musteri {
         this.mail = mail;
     }
 
+    public Long getId() {
+        return id;
+    }
 }

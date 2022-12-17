@@ -11,16 +11,16 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path="api/v1/musteri")
-public class musteriController {
+public class CustomerController {
 
-    private final musteriService musteriService;
+    private final CustomerService musteriService;
 
     @Autowired
-    public musteriController(musteriService musteriService){
+    public CustomerController(CustomerService musteriService){
         this.musteriService = musteriService;
     }
     @GetMapping
-    public List<Musteri> getMusteriler(){
+    public List<Customer> getMusteriler(){
         return musteriService.getMusteriler();
     }
 
